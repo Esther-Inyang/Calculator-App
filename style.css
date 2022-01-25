@@ -1,0 +1,93 @@
+*, 
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+}
+
+body{
+    background-image: linear-gradient(-45deg, rgb(111, 175, 9), rgba(5, 1, 15, 0.5), pink);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    /* min-height: 80vh;  to set the height */
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 80px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+}
+
+.calculator-grid > button{
+    font-size: 1.5rem;
+    cursor: pointer;
+    outline: none;
+    background-image: linear-gradient(-45deg, #00aaff, pink, #00ffaa);
+    background-size: 300% 100%;
+    /* background-position: 0 0; */
+    /* background-color: #12fcf0; */
+    border: 1px solid rgb(255, 255, 255,0.6);
+    transition: all ease .4s;
+}
+
+.calculator-grid > button:hover{
+    background-position: 50% 200%; /*#a4fcde*/
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.output{
+    grid-column: 1/-1;
+    background-color: rgb(0, 0, 0, 0.5);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.prev-calc{
+    color: rgb(255, 255, 255, .7);
+    font-size: 1.5rem;
+}
+
+.current-calc{
+    color: white;
+    font-size: 2rem;
+}
+
+/*
+------For Fine HOVER effect---------
+.hover-me{
+    padding: 10px 30px;
+    margin-top: 5px;
+    border: none;
+    background-image: linear-gradient(-45deg, red, green, blue);
+    background-size: 400% 400%;
+    background-position: 0 0;
+    transition: all ease 1s;
+    border-radius: 50% 0 50% 0;
+}
+
+.hover-me:hover{
+    border-radius: 0 50% 0 50%;
+    background-position: 100% 50%;
+}
+
+*/
